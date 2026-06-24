@@ -1431,7 +1431,6 @@ install_speedtest() {
     local mirrors=(
         "https://install.speedtest.net/app/cli/${tgz_name}"
         "https://dl.lamp.sh/speedtest/${tgz_name}"
-        "https://gh.api.99988866.xyz/https://github.com/nicholasgkong/nicholasgkong.github.io/releases/download/speedtest/ookla-speedtest-1.2.0-linux-${arch}.tgz"
     )
 
     local downloaded=0
@@ -1616,7 +1615,7 @@ run_unixbench() {
         echo -e " ${BLUE}正在下载 UnixBench 5.1.3...${PLAIN}"
         local ub_urls=(
             "https://dl.lamp.sh/files/UnixBench5.1.3.tgz"
-            "https://github.com/nicholasgkong/nicholasgkong.github.io/releases/download/unixbench/UnixBench5.1.3.tgz"
+            "https://github.com/kdlucas/byte-unixbench/archive/refs/heads/master.tar.gz"
         )
         local got=0
         for url in "${ub_urls[@]}"; do
@@ -1633,6 +1632,8 @@ run_unixbench() {
     echo -e " ${BLUE}正在解压并编译...${PLAIN}"
     tar -zxf "$ub_tgz" -C "$ub_dir" >/dev/null 2>&1
     local ub_src="${ub_dir}/UnixBench"
+    # 官方 byte-unixbench 仓库解压后目录结构为 byte-unixbench-master/UnixBench
+    [[ ! -d "$ub_src" ]] && ub_src=$(find "$ub_dir" -maxdepth 2 -type d -name "UnixBench" 2>/dev/null | head -1)
     [[ ! -d "$ub_src" ]] && echo -e " ${RED}解压失败${PLAIN}" && return 1
 
     cd "$ub_src" || return 1
