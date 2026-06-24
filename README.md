@@ -21,6 +21,7 @@
 vpscheck 是一款面向中国用户的 VPS 全能检测脚本，涵盖流媒体解锁、AI 服务可用性、IP 风险分析、三网回程路由、服务器性能基准等 16 项检测模块，一条命令即可全面了解你的 VPS 节点质量。
 
 **核心优势：**
+
 - ✅ 流媒体覆盖最全，涵盖全球 20+ 主流平台
 - ✅ AI 服务检测，ChatGPT / Gemini / Claude / Grok / DeepSeek / Kimi 一网打尽
 - ✅ IP 风险评分，结合 AbuseIPDB + Scamalytics 双重评估
@@ -35,12 +36,12 @@ vpscheck 是一款面向中国用户的 VPS 全能检测脚本，涵盖流媒体
 
 ### 📺 流媒体解锁检测
 
-| 分类 | 平台 |
-|------|------|
-| **全球流媒体** | Netflix · Disney+ · HBO Max · Hulu · Prime Video · Apple TV+ · Paramount+ · Peacock |
-| **亚太流媒体** | HotStar · Bahamut（動畫瘋）· AbemaTV · NicoNico · TVBAnywhere+ |
-| **音乐 & 短视频** | Spotify · YouTube · TikTok |
-| **体育 & 英国** | DAZN · F1 TV · BBC iPlayer |
+| 分类              | 平台                                                                                |
+| ----------------- | ----------------------------------------------------------------------------------- |
+| **全球流媒体**    | Netflix · Disney+ · HBO Max · Hulu · Prime Video · Apple TV+ · Paramount+ · Peacock |
+| **亚太流媒体**    | HotStar · Bahamut（動畫瘋）· AbemaTV · NicoNico · TVBAnywhere+                      |
+| **音乐 & 短视频** | Spotify · YouTube · TikTok                                                          |
+| **体育 & 英国**   | DAZN · F1 TV · BBC iPlayer                                                          |
 
 ### 🤖 AI 服务检测
 
@@ -55,26 +56,26 @@ ChatGPT · OpenAI API · Gemini · Claude · Copilot · Grok · Perplexity · Mi
 
 ### 🚀 服务器性能测试
 
-| 测试项 | 说明 |
-|--------|------|
-| **系统信息** | CPU 型号 / 核心数 / 内存 / 磁盘 / 虚拟化类型 / 系统负载 |
-| **磁盘 I/O** | 顺序读写 + 4K 随机写，评估存储性能 |
-| **三网测速** | 电信 / 联通 / 移动全节点测速 |
-| **三网快速测速** | 每运营商取 2 个节点，快速评估带宽 |
-| **UnixBench** | CPU 综合跑分，横向对比服务器算力 |
-| **延迟测试** | Google / Cloudflare / Netflix CDN / OpenAI 等节点延迟 |
+| 测试项           | 说明                                                    |
+| ---------------- | ------------------------------------------------------- |
+| **系统信息**     | CPU 型号 / 核心数 / 内存 / 磁盘 / 虚拟化类型 / 系统负载 |
+| **磁盘 I/O**     | 顺序读写 + 4K 随机写，评估存储性能                      |
+| **三网测速**     | 电信 / 联通 / 移动全节点测速                            |
+| **三网快速测速** | 每运营商取 2 个节点，快速评估带宽                       |
+| **UnixBench**    | CPU 综合跑分，横向对比服务器算力                        |
+| **延迟测试**     | Google / Cloudflare / Netflix CDN / OpenAI 等节点延迟   |
 
 ### 🗺️ 回程路由检测
 
 支持五网回程路由追踪，精准识别线路类型：
 
-| 运营商 | 精品线路 | 普通线路 |
-|--------|---------|---------|
-| 🔴 中国电信 | CN2 GIA (AS4809) | 163骨干 (AS4134) |
-| 🟡 中国联通 | 精品网 (AS9929) | 169骨干 (AS4837) |
-| 🟢 中国移动 | CMI (AS58453) | 移动骨干 (AS9808) |
-| 🔵 教育网 | CERNET2 (AS24206) | CERNET (AS4538) |
-| 🟣 广电 | 广电骨干 (AS56048) | — |
+| 运营商      | 精品线路           | 普通线路          |
+| ----------- | ------------------ | ----------------- |
+| 🔴 中国电信 | CN2 GIA (AS4809)   | 163骨干 (AS4134)  |
+| 🟡 中国联通 | 精品网 (AS9929)    | 169骨干 (AS4837)  |
+| 🟢 中国移动 | CMI (AS58453)      | 移动骨干 (AS9808) |
+| 🔵 教育网   | CERNET2 (AS24206)  | CERNET (AS4538)   |
+| 🟣 广电     | 广电骨干 (AS56048) | —                 |
 
 自动识别**绕路**（经美国/欧洲中转），延迟增加 100ms+ 会有明显警告提示。
 
@@ -85,13 +86,13 @@ ChatGPT · OpenAI API · Gemini · Claude · Copilot · Grok · Perplexity · Mi
 ### 一键运行
 
 ```bash
-bash <(curl -sL https://raw.githubusercontent.com/adsorgcn/vpscheck/main/vpscheck.sh)
+bash <(curl -sL https://raw.githubusercontent.com/DDDalek92/vpscheck/main/vpscheck.sh)
 ```
 
 使用 wget：
 
 ```bash
-wget -O vpscheck.sh https://raw.githubusercontent.com/adsorgcn/vpscheck/main/vpscheck.sh && bash vpscheck.sh
+wget -O vpscheck.sh https://raw.githubusercontent.com/DDDalek92/vpscheck/main/vpscheck.sh && bash vpscheck.sh
 ```
 
 ### 命令行参数（进阶用法）
@@ -118,14 +119,14 @@ bash vpscheck.sh -u
 
 ### 参数说明
 
-| 参数 | 说明 |
-|------|------|
+| 参数        | 说明                                 |
+| ----------- | ------------------------------------ |
 | `-r <编号>` | 直接运行指定检测项（见下方菜单编号） |
-| `-I <网卡>` | 指定出口网卡，如 `eth0` |
-| `-P <代理>` | 使用代理，格式 `socks5://host:port` |
-| `-u` | 仅显示已解锁的服务 |
-| `-o <文件>` | 将检测结果保存为纯文本报告 |
-| `-h` | 显示帮助 |
+| `-I <网卡>` | 指定出口网卡，如 `eth0`              |
+| `-P <代理>` | 使用代理，格式 `socks5://host:port`  |
+| `-u`        | 仅显示已解锁的服务                   |
+| `-o <文件>` | 将检测结果保存为纯文本报告           |
+| `-h`        | 显示帮助                             |
 
 ---
 
@@ -174,6 +175,7 @@ bash vpscheck.sh -u
 ```bash
 sudo bash vpscheck.sh
 ```
+
 </details>
 
 <details>
@@ -186,6 +188,7 @@ sudo bash vpscheck.sh
 - **网络波动**：建议重复检测 2-3 次取平均值
 
 使用 `-u` 参数可只显示已解锁项目，更便于截图分享。
+
 </details>
 
 <details>
@@ -194,6 +197,7 @@ sudo bash vpscheck.sh
 完整回程路由检测（选项 16）需追踪 10 条路径，预计耗时 5-15 分钟，这是正常现象。
 
 启动时的 **IP 分析面板** 已包含五网回程路由摘要，无需单独运行选项 16 也能快速了解线路质量。
+
 </details>
 
 <details>
@@ -204,6 +208,7 @@ bash vpscheck.sh -r 1 -o /root/vps-report.txt
 ```
 
 报告为纯文本格式（已去除颜色代码），方便在论坛、群组分享。
+
 </details>
 
 <details>
@@ -212,6 +217,7 @@ bash vpscheck.sh -r 1 -o /root/vps-report.txt
 支持所有主流 Linux 发行版：Debian / Ubuntu（apt）· CentOS / RHEL（yum）· Fedora（dnf）· Alpine Linux（apk）
 
 脚本启动时会自动检测并安装缺失依赖。
+
 </details>
 
 <details>
@@ -219,13 +225,13 @@ bash vpscheck.sh -r 1 -o /root/vps-report.txt
 
 综合评级基于 **IP类型** 和 **欺诈风险分** 计算，不含路由与延迟因素：
 
-| 评级 | 含义 |
-|------|------|
+| 评级  | 含义                          |
+| ----- | ----------------------------- |
 | **S** | 极佳：家宽/原生IP，解锁能力强 |
-| **A** | 良好：大部分平台可解锁 |
-| **B** | 中等：部分平台可解锁 |
-| **C** | 较差：仅少数平台可解锁 |
-| **D** | 极差：大部分平台屏蔽 |
+| **A** | 良好：大部分平台可解锁        |
+| **B** | 中等：部分平台可解锁          |
+| **C** | 较差：仅少数平台可解锁        |
+| **D** | 极差：大部分平台屏蔽          |
 
 </details>
 
@@ -234,6 +240,7 @@ bash vpscheck.sh -r 1 -o /root/vps-report.txt
 ## 🔄 更新日志
 
 ### v3.2.0 (2026-02-21)
+
 - 🆕 新增 DeepSeek 检测（含 API 可达性验证）
 - 🆕 新增 Kimi（月之暗面）检测（含 API 可达性验证）
 - 🔧 修复 Bahamut Cookie 文件无进程隔离问题，防止多进程并发冲突
@@ -243,6 +250,7 @@ bash vpscheck.sh -r 1 -o /root/vps-report.txt
 - 🔧 新增 Bash 4.0+ 版本检测，老系统启动时给出明确提示
 
 ### v3.1.0 (2026-02-19)
+
 - 🎉 首次公开发布
 - ✅ 流媒体检测覆盖 20+ 全球主流平台
 - ✅ AI 服务检测覆盖 11 个主流平台
